@@ -61,13 +61,42 @@
 
 // Q 5 - Add up the numbers from a single number
 
-function progressiveSum(num) {
-    let sum = 0
-    for (let i = 0; i < num + 1; ++i) {
-        console.log(i)
-        sum = sum + i
-    }
-    return sum;
-}
+// function progressiveSum(num) {
+//     let sum = 0
+//     for (let i = 0; i <= num; ++i) {
+//         console.log(i)
+//         sum = sum + i
+//     }
+//     return sum;
+// }
 
-console.log(progressiveSum(5));
+// console.log(progressiveSum(5));
+
+// Q 6 - Calculate the time
+// function calcTime(seconds) {
+//     let timerMinutes = Math.floor(seconds / 60)
+//     //  rounds the number of minutes down to closest whole number
+//     let timerSeconds = seconds % 60;
+//     //  figurs ot the remainder
+//     if (timerMinutes.toString().length === 1) {
+//         timerMinutes = '0' + timerMinutes
+//     }
+//     //  converts number to a string, so we can add a '0'
+//     //  if minutes are a single digit
+//     return timerMinutes + ':' + timerSeconds;
+
+// }
+
+// console.log(calcTime(630));
+
+// Q 7 - find the largest number
+
+ function getMax(arr) {
+    for (let i=0; i < arr.length; ++i) {
+        console.log(arr[i]);
+
+        if arr[i] 
+    }
+ }
+
+ console.log(getMax([-100, -200, -300]));
