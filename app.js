@@ -91,12 +91,46 @@
 
 // Q 7 - find the largest number
 
- function getMax(arr) {
-    for (let i=0; i < arr.length; ++i) {
-        console.log(arr[i]);
+// function getMax(arr) {
+//     let max = arr[0]; // sets max at the 1st # in array
+//     for (let i = 0; i < arr.length; ++i) {
+//         if (arr[i] > max) { 
+//             max = arr[i]; 
+//         } // if next # is > max, reset max to next #
+//     }     // if not, keep max at current #  
+//     return max; // once array has been gone through, return max
+// }
 
-        if arr[i] 
-    }
- }
+//  console.log(getMax([5, 47, -35]));
 
- console.log(getMax([-100, -200, -300]));
+// Q 8 - Reverse a string
+
+function reverseString(str) {
+//  3 ways to do this
+//  #1 - incrementing loop
+//     let reversedString = '';
+//     for (let i=0; i < str.length; ++i) {
+//         reversedString = str[i] + reversedString; // Order critical - str[i] must go first
+//     }
+//     return reversedString;
+// }
+
+// #2 - decremental loop
+//     let reversedString = '';
+//     for (let i = str.length - 1; i >= 0; --i) {
+//         // reversedString = reversedString + str[i];
+//         reversedString += str[i]; // cleaner
+//     }
+//     return reversedString;
+// }
+
+// #3 reversed array
+
+    // const strArr = str.split('')
+    // strArr.reverse();
+    // return strArr.join('');
+
+    return str.split('').reverse().join('');  // Streamlined
+}
+
+console.log(reverseString('This is cool'));
