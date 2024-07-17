@@ -105,7 +105,7 @@
 
 // Q 8 - Reverse a string
 
-function reverseString(str) {
+// function reverseString(str) {
 //  3 ways to do this
 //  #1 - incrementing loop
 //     let reversedString = '';
@@ -130,7 +130,115 @@ function reverseString(str) {
     // strArr.reverse();
     // return strArr.join('');
 
-    return str.split('').reverse().join('');  // Streamlined
+//     return str.split('').reverse().join('');  // Streamlined
+// }
+
+// console.log(reverseString('This is cool'));
+
+// Q 9 - Turn every element in an array into 0
+
+// 3 solutions - #1 for loop
+// function convertToZeros(arr) {
+//     let newArr = [];
+//     for (let i = 0; i < arr.length; ++i) {
+//         newArr[i] = 0
+//     }
+//     return newArr;
+    
+// }
+
+// console.log(convertToZeros([1, 2, 3, 4, 5, 6]));
+
+// solution # 2 - array 'fill'
+
+// function convertToZeros(arr) {
+//     // creates new array and fills w/ zeros
+//     return new Array(arr.length).fill(0)
+// }
+
+// console.log(convertToZeros([1, 2, 3, 4, 5, 6]));
+
+// solution # 3 array "map"
+
+// function convertToZeros(arr){
+    
+//     return arr.map(elem => elem * 0)
+//     // or
+//     return arr.map(elem => {
+//         return 'dog'
+//     });
+
+//     // .map changes every element in the array
+//     // into whatever is on the right side of
+//     // operation
+
+//     // if using curly brackets, something must be returned
+
+// }
+
+
+// console.log(convertToZeros([1, 2, 3, 4, 5, 6]));
+
+// Q 10 Filter out all the apples
+
+// for loop solution
+// function removeApples(arr) {
+//     let noApples = [];
+//     for (let i = 0; i < arr.length; ++i) {
+//         if (arr[i] !== 'Apple') {
+//            noApples.push(arr[i]);
+//         }
+//     }
+//     return noApples;
+// }
+
+// console.log(removeApples(['Peach', 'Tomato', 'Banana']));
+
+// array filter solution
+
+// function removeApples(arr) {
+//     // let noApples = arr.filter((element) => {
+//     //     if (element !== 'Apple') {
+//     //         return true;
+//     //     }   
+//     // })
+//     // return noApples; 
+
+//     return arr.filter(elem => elem !== 'Apple') // Streamlined
+
+// }
+
+// console.log(removeApples(['Peach', 'Apple', 'Banana']));
+
+// Q 11 - Filter out all the falsy values
+
+// function filterOutFalsy(arr) {
+//     return arr.filter(elem => !!elem === true)
+//     // !! converts to the boolean equivalent
+// }  
+
+// console.log(filterOutFalsy([null, "0", 'Tomato', [], "", 'Banana']));
+
+// function filterOutFalsy(arr) {
+//     let truthy = [];
+//      for (let i = 0; i < arr.length; ++i) {
+//          if (!!arr[i] === true) {
+//              truthy.push(arr[i])
+//          } 
+//      }
+//      return truthy;
+
+// }
+
+// console.log(filterOutFalsy([null, "0", 'Tomato', [], "", 'Banana']));
+
+// Q 12 Truthy to true, Falsy to false
+
+
+// coverting means using the map function
+function convertToBoolean(arr) {
+   return arr.map(elem => !!elem);
+   
 }
 
-console.log(reverseString('This is cool'));
+console.log(convertToBoolean([500, 0, "Alan", "", []]))
