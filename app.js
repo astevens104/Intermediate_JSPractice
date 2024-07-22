@@ -181,3 +181,46 @@ function convertToZeros(arr) {
 
 console.log(convertToZeros([1, 2, 3, 4, 5, 6]))
 
+// function removeApples(arr) {
+//     let newArr = []
+//     for (let i =0; i < arr.length; ++i) {
+//         if (arr[i] !== 'apples') {
+//             newArr.push(arr[i]);
+//         }
+//     }
+//     return newArr;
+// }
+
+// console.log(removeApples(['Peaches', 'apples', 'bananas', 'grapes']))
+
+function removeApples(arr) {
+     return arr.filter(element => element !== 'apples');
+     
+}
+
+console.log(removeApples(['grapes', 'kiwis', 'apples']))
+
+function filterOutFalsy(arr) {
+    let noFalsy = [];
+    for (let i = 0; i < arr.length; ++i) {
+        if (!!arr[i] === true) {
+            noFalsy.push(arr[i]);
+        }
+    }
+    return noFalsy;
+}
+
+console.log(filterOutFalsy(["", 0, null, "0", 472]))
+
+function filterOutFalsy(arr) {
+    return arr.filter(element => !!element === true);
+}
+
+console.log(filterOutFalsy([2, 0, [], NaN, 'George']))
+
+function convertToBoolean(arr) {
+    return arr.map(elem => !!elem);
+}
+
+console.log(convertToBoolean([500, 0, 'Alan', '', []]));
+
