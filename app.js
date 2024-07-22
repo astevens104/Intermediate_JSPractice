@@ -133,3 +133,51 @@ function calcTime(seconds) {
 
 console.log(calcTime(300));
 
+function reverseString(str) {
+    let reversedString = ''
+    for (let i =0; i < str.length; ++i) {
+       reversedString = str[i] + reversedString;
+    }
+    return reversedString;
+}
+
+console.log(reverseString('Alan'));
+
+function reverseString(str) {
+    let reversedString = ''
+    for (let i = str.length - 1; i >= 0; --i) {
+       reversedString = reversedString + str[i];
+    }
+    return reversedString;
+}
+
+console.log(reverseString('George'))
+
+function reverseString(str) {
+    return str.split('').reverse().join('');
+}
+
+console.log(reverseString('Stevens'))
+
+function convertToZeros(arr) {
+    let newArr = []
+    for (let i = 0; i < arr.length; ++i) {
+        arr[i] = 0
+    }
+    return arr;
+}
+
+console.log(convertToZeros([1, 2, 3, 4, 5, 6]));
+
+function convertToZero(arr) {
+    return arr.length.fill(0);
+}
+
+console.log(convertToZeros([1, 2, 3, 4, 5, 6]))
+
+function convertToZeros(arr) {
+    return arr.map(elem => 0);
+}
+
+console.log(convertToZeros([1, 2, 3, 4, 5, 6]))
+
